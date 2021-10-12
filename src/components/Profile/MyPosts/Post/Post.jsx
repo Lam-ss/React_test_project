@@ -1,5 +1,5 @@
 import s from './Post.module.css';
-
+import avaPost from '../../../../my_img/images_1.jfif';
 
 
 
@@ -8,10 +8,11 @@ const Post = (props) => {
 
     return (
         <div className={s.item}>
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTf1nGSgVM8Oc_drnppk8wmDGZ1uUegROMw&usqp=CAU' />
+            <img src={avaPost} />
             {props.message}
             <div>
                 <span>like</span>
+                <span>{props.likeCount}</span>
             </div>
         </div>
     )

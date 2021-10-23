@@ -1,4 +1,4 @@
-import preloader from '../../../my_img/images_1.jfif';
+import preloader from '../../../my_img/loading.gif';
 
 let Preloader = (props) => {
     return (

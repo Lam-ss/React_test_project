@@ -2,6 +2,7 @@ import React from 'react';
 import ava from '../../my_img/ava.jfif'
 import styles from './Users.module.css'
 import * as axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 let Users = (props) => {
 
@@ -24,7 +25,10 @@ let Users = (props) => {
                 props.users.map(u => <div key={u.id}>
                     <span>
                         <div>
-                            <img src={ava} className={styles.userPhoto} />
+                            <NavLink to={'/profile/' + u.id}>
+                                <img src={u.photos.small != null ? u.photos.small : ava} 
+                                    className={styles.userPhoto} />
+                            </NavLink>
                         </div>
                         <div>
                             {u.followed

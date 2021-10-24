@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import './App.css';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from "./components/Header/HeaderContainer";
+import LoginPage from "./components/Login/Login";
 import Navbar from './components/Navbar/Navbar';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import UsersConteiner from './components/Users/UsersConteiner';
@@ -26,6 +27,9 @@ const App = (props) => {
 
           <Route path='/users' 
                   render={() => <UsersConteiner />} />
+
+          <Route path='/login' 
+                  render={() => <LoginPage />} />
         </div>
       </div>
     </BrowserRouter>
